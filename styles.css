@@ -1,0 +1,98 @@
+.body{
+padding-top: 25px;
+  margin:0;
+}
+
+html {
+  height:100%;
+}
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, rgb(15, 15, 15) 50%, rgb(0, 27, 41) 50%);
+  bottom:0;
+  left:-98%;
+  opacity: 1;
+  position:fixed;
+  right:-98%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:10s;
+}
+
+.bg3 {
+  animation-duration:10s;
+}
+
+.content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+.header, .links, .info{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.mypic{
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 75px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+}
+.name{
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: Oswald, Arial;
+}
+.k{
+  color: rgb(182, 182, 182);
+}
+.imgs{
+  width: 70px;
+  height: 70px;
+}
+.empty{
+  margin: 0 15px;
+}
+.text{
+  color: rgb(178, 209, 250);
+  font-family: Oswald, arial;
+  font-size: 20px;
+}
+.information{
+  margin-top: 30px;
+}
+.i{
+  color: rgb(77, 115, 218);
+}
