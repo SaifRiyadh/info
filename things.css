@@ -1,0 +1,552 @@
+
+/* =========================================
+   THINGS I LOVE — SAIF RIYADH
+   Vintage / cinematic / dark
+   ========================================= */
+
+:root {
+    --background: #101010;
+    --surface: #171614;
+    --text: #e9e1d6;
+    --muted: #a49a8e;
+    --line: rgba(233, 225, 214, 0.13);
+
+    --red: #8f292c;
+    --red-light: #c36b64;
+
+    --brown: #75543b;
+    --brown-light: #c1a17c;
+
+    --blue: #263f5b;
+    --blue-light: #88a7c6;
+
+    --serif: "IM Fell English", Georgia, serif;
+    --sans: "Inter", sans-serif;
+    --display: "Oswald", sans-serif;
+    --mono: "DM Mono", monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 25px;
+}
+
+body {
+    background:
+        radial-gradient(ellipse at 50% 0%, #211817 0%, transparent 42%),
+        var(--background);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.7;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Subtle grain-like texture made with CSS gradients */
+.page-texture {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.25;
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 3px,
+            rgba(255, 255, 255, 0.012) 4px
+        ),
+        radial-gradient(
+            ellipse at 50% 35%,
+            transparent 20%,
+            rgba(0, 0, 0, 0.48) 100%
+        );
+}
+
+/* Top navigation */
+
+.topbar {
+    width: min(1100px, calc(100% - 48px));
+    margin: auto;
+    padding: 28px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+}
+
+.signature {
+    color: var(--text);
+    font-family: var(--display);
+    font-size: 17px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.signature span {
+    color: var(--red-light);
+}
+
+.back-link,
+.back-top {
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.back-link:hover,
+.back-top:hover {
+    color: var(--text);
+}
+
+/* Intro */
+
+main {
+    width: min(1000px, calc(100% - 48px));
+    margin: auto;
+}
+
+.intro {
+    padding: 100px 0 72px;
+    text-align: center;
+}
+
+.eyebrow,
+.section-kicker {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2.4px;
+    color: var(--red-light);
+}
+
+.intro h1 {
+    margin-top: 16px;
+    font-family: var(--display);
+    font-size: clamp(48px, 8vw, 83px);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+.intro h1 em,
+.section-heading h2 em {
+    color: var(--red-light);
+    font-family: var(--serif);
+    font-weight: 400;
+}
+
+.intro-text {
+    max-width: 440px;
+    margin: 18px auto 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* Three clickable words */
+
+.section-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 42px;
+}
+
+.section-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    padding: 13px 17px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.015);
+    color: var(--text);
+    font-family: var(--display);
+    font-size: 13px;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.section-nav a:hover {
+    transform: translateY(-3px);
+}
+
+.section-nav a span {
+    font-family: var(--mono);
+    font-size: 9px;
+    opacity: 0.7;
+}
+
+.nav-movies:hover {
+    border-color: var(--red-light);
+    background: rgba(143, 41, 44, 0.18);
+}
+
+.nav-music:hover {
+    border-color: var(--brown-light);
+    background: rgba(117, 84, 59, 0.18);
+}
+
+.nav-made:hover {
+    border-color: var(--blue-light);
+    background: rgba(38, 63, 91, 0.2);
+}
+
+/* Collection sections */
+
+.collection {
+    --accent: var(--red);
+    --accent-light: var(--red-light);
+
+    position: relative;
+    margin: 0 0 42px;
+    padding: 34px;
+    border: 1px solid var(--line);
+    border-top: 2px solid var(--accent);
+    background:
+        linear-gradient(
+            135deg,
+            color-mix(in srgb, var(--accent) 11%, transparent),
+            transparent 42%
+        ),
+        rgba(255, 255, 255, 0.012);
+    scroll-margin-top: 22px;
+}
+
+.collection.movies {
+    --accent: var(--red);
+    --accent-light: var(--red-light);
+}
+
+.collection.music {
+    --accent: var(--brown);
+    --accent-light: var(--brown-light);
+}
+
+.collection.made {
+    --accent: var(--blue);
+    --accent-light: var(--blue-light);
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    padding-bottom: 27px;
+    margin-bottom: 27px;
+    border-bottom: 1px solid var(--line);
+}
+
+.section-kicker {
+    color: var(--accent-light);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    margin-top: 8px;
+    font-family: var(--display);
+    font-size: clamp(29px, 4vw, 42px);
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.section-heading h2 em {
+    color: var(--accent-light);
+}
+
+.section-description {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.section-index {
+    flex-shrink: 0;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-align: right;
+}
+
+/* Two cards per row */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px 22px;
+}
+
+.item-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgba(233, 225, 214, 0.1);
+    background: rgba(0, 0, 0, 0.19);
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.item-card:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(
+        in srgb,
+        var(--accent-light) 55%,
+        transparent
+    );
+    background: rgba(255, 255, 255, 0.025);
+}
+
+/* Images */
+
+.image-wrap {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            135deg,
+            color-mix(in srgb, var(--accent) 50%, #171614),
+            #171614
+        );
+}
+
+.image-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+        180deg,
+        transparent 50%,
+        rgba(0, 0, 0, 0.38) 100%
+    );
+}
+
+.image-wrap img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.78) contrast(1.04);
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+.item-card:hover .image-wrap img {
+    transform: scale(1.035);
+    filter: saturate(0.98) contrast(1.04);
+}
+
+.image-label {
+    position: absolute;
+    left: 12px;
+    bottom: 10px;
+    z-index: 1;
+    color: #fff4e7;
+    font-family: var(--mono);
+    font-size: 8px;
+    letter-spacing: 1.5px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Card information */
+
+.item-info {
+    padding: 17px 17px 19px;
+}
+
+.item-title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.item-info h3 {
+    color: var(--text);
+    font-family: var(--display);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.rating {
+    flex-shrink: 0;
+    padding-top: 4px;
+    color: var(--accent-light);
+    font-size: 12px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.item-info p {
+    margin-top: 9px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+/* Footer */
+
+.page-footer {
+    padding: 48px 0 28px;
+    text-align: center;
+}
+
+.footer-quote {
+    color: var(--muted);
+    font-family: var(--serif);
+    font-size: 19px;
+    font-style: italic;
+}
+
+.back-top {
+    display: inline-block;
+    margin-top: 25px;
+}
+
+.copyright {
+    margin-top: 34px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    color: #716a62;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+/* Tablet and mobile */
+
+@media (max-width: 650px) {
+    .topbar {
+        width: calc(100% - 32px);
+        padding: 22px 0;
+    }
+
+    main {
+        width: calc(100% - 28px);
+    }
+
+    .intro {
+        padding: 75px 0 48px;
+    }
+
+    .section-nav {
+        gap: 8px;
+    }
+
+    .section-nav a {
+        gap: 8px;
+        padding: 11px 12px;
+        font-size: 11px;
+    }
+
+    .collection {
+        padding: 20px 15px;
+        margin-bottom: 25px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .section-index {
+        max-width: 75px;
+        font-size: 8px;
+        line-height: 1.7;
+    }
+
+    .card-grid {
+        gap: 18px 12px;
+    }
+
+    .item-info {
+        padding: 12px 10px 15px;
+    }
+
+    .item-info h3 {
+        font-size: 17px;
+    }
+
+    .rating {
+        font-size: 10px;
+        letter-spacing: 0;
+    }
+
+    .item-info p {
+        font-size: 10px;
+        line-height: 1.8;
+    }
+
+    .image-label {
+        left: 8px;
+        bottom: 7px;
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 370px) {
+    .section-nav {
+        gap: 6px;
+    }
+
+    .section-nav a {
+        padding: 10px 8px;
+        font-size: 10px;
+    }
+
+    .collection {
+        padding: 15px 10px;
+    }
+
+    .card-grid {
+        gap: 14px 8px;
+    }
+
+    .item-info h3 {
+        font-size: 15px;
+    }
+
+    .rating {
+        font-size: 9px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

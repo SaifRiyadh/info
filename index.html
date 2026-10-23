@@ -1,84 +1,289 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
-    <link href="link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
-    <title>Saif Riyadh Kadhum</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  </head>
-  <body class="body">
+  <meta name="theme-color" content="#101010">
+  <meta name="description"
+        content="Saif Riyadh Kadhum — medical student, music admirer, and creative mind.">
 
+  <title>Saif Riyadh Kadhum</title>
 
-    <div class="bg"></div>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="top">
+
+  <!-- Animated background -->
+  <div class="background" aria-hidden="true">
+    <div class="bg bg1"></div>
     <div class="bg bg2"></div>
-    <div class="bg bg3"></div>
-    
-    
-    <div class="header">
-      <img class="mypic" src="Pictures/WebSite.jpg">
-    </div>
-    <div class="header">
-      <p class="name">S<span class="k">a</span>if Riy<span class="k">a</span>dh K<span class="k">a</span>dhum</p>
-    </div>
-      
-    <div class="links">
-      <a href="https://t.me/SaifRiyadh" target="_blank">
-        <img class="imgs" src="Pictures/telegram.png">
-      </a>
-      <div class="empty"></div>
-      <a href="https://instagram.com/s.3r2" target="_blank">
-        <img class="imgs" src="Pictures/instagram.png">
-      </a>
-      <div class="empty"></div>
-      <a href="mailto:SaifRiyadhKadhum@gmail.com" target="_blank">
-        <img class="imgs" src="Pictures/gmail.png">
-      </a>
-      <div class="empty"></div>
-      <a href="https://drive.google.com/file/d/1emfu_Vetmr6dPG5qTlbWw1DO_XctSX2K/view?usp=drivesdk" target="_blank">
-        <img class="imgss" src="Pictures/ObscurusCover.jpg">
-      </a>
-    </div>
-
-  <div class="information">
-    <div class="info">
-      <p class="text">
-        <span class="i">Medical Student</span>  At UOBKMC
-      </p>
-    </div>
-    
-<div class="info">
-      <p class="text">
-        <span class="i">Vintage</span> Soul And Admirer Of <span class="i">Music</span>
-      </p>
-    </div>
-    
-    <div class="info">
-      <p class="text">
-        <span class="i">Designer</span> And <span class="i">Technology</span> Enthusiast
-      </p>
-    </div>
-
-    <div class="info">
-      <p class="text">
-         Passionate About <span class="i">Capturing</span> & <span class="i">Creating</span> 
-      </p>
-    </div>
-    
-    
-    
   </div>
-  </body>
+
+  <main class="page">
+
+    <!-- HERO -->
+    <header class="hero">
+
+      <img
+        class="profile-picture"
+        src="Pictures/WebSite.jpg"
+        alt="Portrait of Saif Riyadh Kadhum"
+      >
+
+      <p class="eyebrow">A LITTLE CORNER OF THE INTERNET</p>
+
+      <h1 class="name">
+        Saif Riyadh <span>Kadhum</span>
+      </h1>
+
+      <p class="bio">
+        Medical student. Vintage soul. Creative mind.
+      </p>
+
+      <!-- Four existing links -->
+      <nav class="social-links" aria-label="Social links">
+
+        <a href="https://t.me/SaifRiyadh"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Telegram">
+          <img src="Pictures/telegram.png" alt="">
+        </a>
+
+        <a href="https://instagram.com/s.3r2"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Instagram">
+          <img src="Pictures/instagram.png" alt="">
+        </a>
+
+        <a href="mailto:SaifRiyadhKadhum@gmail.com"
+           aria-label="Email">
+          <img src="Pictures/gmail.png" alt="">
+        </a>
+
+      
+      </nav>
+
+        <a href="https://drive.google.com/file/d/1emfu_Vetmr6dPG5qTlbWw1DO_XctSX2K/view?usp=drivesdk"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Obscurus">
+          <img class="book-cover"
+               src="Pictures/ObscurusCover.jpg"
+               alt="">
+        </a>
+
+
+
+      <a class="scroll-link" href="#about">
+        GET TO KNOW ME <span>↓</span>
+      </a>
+
+    </header>
+
+
+    <!-- ABOUT ME -->
+    <section class="section about" id="about">
+
+      <div class="section-heading">
+        <span class="section-number">01</span>
+        <h2>A little about me<span>.</span></h2>
+      </div>
+
+      <p class="about-text">
+        I'm a medical student at <span>UOBKMC</span> with a love
+        for <span>music</span>, <span>photography</span>, <span>designing</span>, and <span>technology</span>.
+        I enjoy capturing moments, creating things, and finding
+        beauty in the details.
+      </p>
+
+      <p class="about-note">
+        Medicine by study, art by instinct.
+      </p>
+
+    </section>
+
+
+    <!-- THINGS I LOVE -->
+    <section class="section" id="interests">
+
+      <div class="section-heading">
+        <span class="section-number">02</span>
+        <h2>Things I love<span>.</span></h2>
+      </div>
+
+      <div class="interest-grid">
+
+        <!-- MUSIC -->
+        <article class="interest-card">
+          <img
+            src="Pictures/music.jpg"
+            alt="Music and guitar"
+            class="interest-image"
+            loading="lazy"
+          >
+
+          <div class="card-content">
+            <span class="card-number">01 / LISTEN</span>
+            <h3>Music</h3>
+
+            <p>
+              Guitar, atmospheric instrumentals, and songs that
+              say what words sometimes cannot.
+            </p>
+          </div>
+        </article>
+
+
+        <!-- PHOTOGRAPHY -->
+        <article class="interest-card">
+          <img
+            src="Pictures/photography.jpg"
+            alt="A photograph captured in a cinematic style"
+            class="interest-image"
+            loading="lazy"
+          >
+
+          <div class="card-content">
+            <span class="card-number">02 / CAPTURE</span>
+            <h3>Photography</h3>
+
+            <p>
+              Ordinary moments, unusual perspectives, and
+              the atmosphere of a place.
+            </p>
+          </div>
+        </article>
+
+
+        <!-- FILMS -->
+        <article class="interest-card">
+          <img
+            src="Pictures/movies.jpg"
+            alt="Films and cinema"
+            class="interest-image"
+            loading="lazy"
+          >
+
+          <div class="card-content">
+            <span class="card-number">03 / WATCH</span>
+            <h3>Films, series & stories</h3>
+
+            <p>
+              Psychological films, strange stories, memorable
+              endings, and things worth thinking about.
+            </p>
+          </div>
+        </article>
+
+
+        <!-- DESIGN AND TECHNOLOGY -->
+        <article class="interest-card">
+          <img
+            src="Pictures/design.jpg"
+            alt="Design and creative technology"
+            class="interest-image"
+            loading="lazy"
+          >
+
+          <div class="card-content">
+            <span class="card-number">04 / CREATE</span>
+            <h3>Design & technology</h3>
+
+            <p>
+              Visual ideas, experimenting with technology,
+              and making things of my own.
+            </p>
+          </div>
+        </article>
+
+        <!-- Living my life -->
+        <article class="interest-card">
+          <img
+            src="Pictures/living.jpg"
+            alt="living the life"
+            class="interest-image"
+            loading="lazy"
+          >
+
+          <div class="card-content">
+            <span class="card-number">05 / ENJOY</span>
+            <h3>Living the life</h3>
+
+            <p>
+              Enjoying the life without limits and appriciating every moment.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- WHAT I'M INTO -->
+    <section class="section" id="currently">
+
+      <div class="section-heading">
+        <span class="section-number">03</span>
+        <h2>Explore my taste<span>.</span></h2>
+      </div>
+
+      <p class="section-description">
+        A place where you can discover what I listen to,
+      what I watch, and what i do.
+      </p>
+
+      <div class="taste-links">
+
+        <a class="taste-card"
+           href="things.html"
+           target="_blank" rel="noopener noreferrer">
+
+          <div>
+            <span class="card-number">ON SCREEN</span>
+            <h3>Explore</h3>
+            <p>Films and Shows I've liked, Music I love, and Things I made .</p>
+          </div>
+
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+
+
+    
+
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+      <p class="footer-quote">
+        "A lot to type, no words to describe."
+      </p>
+
+      <p class="footer-small">
+        SAIF RIYADH KADHUM
+        <span> · </span>
+        MADE WITH CURIOSITY
+      </p>
+
+      <a href="#top" class="back-to-top"
+         onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+        BACK TO TOP ↑
+      </a>
+
+    </footer>
+
+  </main>
+
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
