@@ -417,7 +417,7 @@ main {
 .footer-quote {
     color: var(--muted);
     font-family: var(--serif);
-    font-size: 10px;
+    font-size: 12px;
     font-style: italic;
 }
 
