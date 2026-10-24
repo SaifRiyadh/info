@@ -434,8 +434,9 @@ img {
 
 .footer-quote {
   color: #d4ceca;
-  font-family: var(--display-font);
-  font-size: 18px;
+  font-family: var(--serif);
+  font-size: 12px;
+  font-style: italic;
   margin: 0 0 20px;
 }
 
