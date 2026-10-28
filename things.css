@@ -550,3 +550,178 @@ main {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+/* =========================================
+   04 / WORDS THAT STAY — ASH GREY
+   ========================================= */
+
+.collection.quotes {
+    --accent: #656565;
+    --accent-light: #c0bcb5;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(150, 150, 150, 0.085),
+            transparent 55%
+        ),
+        rgba(255, 255, 255, 0.012);
+
+    border-top-color: #777570;
+}
+
+/* Two framed quotes per row */
+
+.quote-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.quote-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+    min-height: 225px;
+    padding: 25px 22px 21px;
+
+    border: 1px solid rgba(192, 188, 181, 0.22);
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.035),
+            transparent 65%
+        ),
+        rgba(15, 15, 15, 0.32);
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.quote-card::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    right: 7px;
+    bottom: 7px;
+    border: 1px solid rgba(192, 188, 181, 0.07);
+    pointer-events: none;
+}
+
+.quote-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(192, 188, 181, 0.48);
+    background-color: rgba(255, 255, 255, 0.025);
+}
+
+/* Large, understated opening quotation mark */
+
+.quote-mark {
+    display: block;
+    height: 37px;
+    color: #aaa69f;
+    font-family: var(--serif);
+    font-size: 57px;
+    line-height: 1;
+    opacity: 0.8;
+}
+
+.quote-card blockquote {
+    position: relative;
+    z-index: 1;
+    margin: 15px 0 28px;
+
+    color: #e0dcd5;
+    font-family: var(--serif);
+    font-size: 19px;
+    font-style: italic;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+}
+
+.quote-bottom {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-top: auto;
+}
+
+.quote-line {
+    display: block;
+    width: 25px;
+    height: 1px;
+    flex-shrink: 0;
+    background: #96918a;
+}
+
+.quote-author {
+    color: #aaa49b;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 1.4px;
+    line-height: 1.8;
+}
+
+/* Smaller screens: keep one columns */
+
+@media (max-width: 650px) {
+    .quote-grid {
+       grid-template-columns 1fr;
+        gap: 14px;
+    }
+
+    .quote-card {
+        min-height: 210px;
+        padding: 19px 13px 16px;
+    }
+
+    .quote-card blockquote {
+        margin: 12px 0 24px;
+        font-size: 16px;
+        line-height: 1.65;
+    }
+
+    .quote-mark {
+        font-size: 47px;
+        height: 30px;
+    }
+
+    .quote-author {
+        font-size: 8px;
+        letter-spacing: 0.8px;
+        overflow-wrap: anywhere;
+    }
+
+    .quote-line {
+        width: 15px;
+    }
+
+    .section-nav a {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 370px) {
+    .quote-card {
+        padding: 15px 10px;
+    }
+
+    .quote-card blockquote {
+        font-size: 14px;
+    }
+
+    .quote-author {
+        font-size: 7px;
+        letter-spacing: 0.4px;
+    }
+
+    .quote-card::before {
+        inset: 4px;
+    }
+}
